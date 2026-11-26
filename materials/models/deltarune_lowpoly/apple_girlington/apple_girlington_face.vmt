@@ -1,0 +1,54 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/deltarune_lowpoly/apple_girlington/vtf/apple_girlington_face"
+    "$nocull" "1"
+    "$nodecal" "1"
+    "$model" "1"
+    "$alphatest" "1"
+
+    "$phong" "1"
+    "$phongexponent" "80"
+    "$phongboost" "0"
+    "$lightwarptexture" "models/deltarune_lowpoly/shared/lightwarp"
+    "$halflambert" "1"
+
+    "$zero" "0"
+    
+    
+    Proxies
+        {
+            ShouldBlink
+            {
+                resultVar $alive
+            }
+            
+            Sine
+            {
+                sinemin      "-1000"         // N°1
+                sinemax      "2.99"          // N°2
+                sineperiod   "8"            // N°3
+                resultVar     "$frame"     // N°4
+             }
+
+            Clamp
+            {
+                min             "0"         // N°5
+                max            "2.99"       // N°6
+                srcVar1       "$frame"     // N°7
+                resultVar     "$frame"     // N°8
+            }
+            
+            LessOrEqual
+            {
+                lessEqualVar        "$zero"
+                greaterVar            "$frame"
+                srcVar1             "$alive"
+                srcVar2                "$zero"
+                resultVar            "$frame"
+            }
+            
+
+        }
+
+
+
