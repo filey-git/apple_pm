@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models/deltarune_lowpoly/apple_girlington/vtf/apple_girlington_body"
+    "$basetexture" "deltarune_lowpoly/apple_girlington/vtf/apple_girlington_body"
     "$nocull" "1"
     "$nodecal" "1"
     "$model" "1"
@@ -10,7 +10,7 @@
     "$phong" "1"
     "$phongexponent" "80"
     "$phongboost" "0"
-    "$lightwarptexture" "models/deltarune_lowpoly/shared/lightwarp"
+    "$lightwarptexture" "deltarune_lowpoly/shared/lightwarp"
     "$halflambert" "1"
 
  
